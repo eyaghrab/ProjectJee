@@ -6,7 +6,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-image: url('background.jpg');
+            background-image: url('/images/study.jpg');
             background-size: cover;
             display: flex;
             justify-content: center;
@@ -22,6 +22,16 @@
             max-width: 400px;
             width: 100%;
             text-align: center;
+            display: flex; /* Utiliser Flexbox pour positionner l'image et le formulaire côte à côte */
+            align-items: center; /* Centrer verticalement les éléments dans le conteneur */
+        }
+        .login-container img {
+            width: 80px; /* Définir la largeur de l'image */
+            margin-right: 20px; /* Ajouter une marge à droite pour séparer l'image du formulaire */
+        }
+        .login-container form {
+            width: 100%; /* Utiliser toute la largeur restante */
+            text-align: left; /* Aligner le texte à gauche */
         }
         .login-container h2 {
             margin-bottom: 20px;
@@ -37,7 +47,7 @@
         }
         .login-container input[type="text"],
         .login-container input[type="password"] {
-            width: 100%;
+            width: calc(100% - 22px); /* Calculer la largeur en soustrayant la largeur des bordures */
             padding: 10px;
             border: 1px solid #ccc;
             border-radius: 4px;
@@ -62,8 +72,10 @@
 </head>
 <body>
     <div class="login-container">
-        <h2>Login</h2>
+        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg"
+          alt="Phone image">
         <form action="login" method="post">
+            <h2>Login</h2>
             <div>
                 <label>Email:</label>
                 <input type="text" name="email" required>

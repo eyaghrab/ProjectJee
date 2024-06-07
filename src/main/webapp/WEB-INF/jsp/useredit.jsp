@@ -7,9 +7,9 @@
 </head>
 <body>
 <header>
-    <nav class="navbar navbar-expand-md navbar-dark" style="background-color: tomato">
+    <nav class="navbar navbar-expand-md navbar-dark" style="background-color: black;">
         <div>
-            <a href="#" class="navbar-brand"> User Management App </a>
+            <a href="#" class="navbar-brand"> IIT Application </a>
         </div>
 
         <ul class="navbar-nav">

@@ -7,12 +7,12 @@
 </head>
 <body>
 <header>
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-md navbar-dark" style="background-color: black;">
         <div class="container">
-            <a href="#" class="navbar-brand">Document Management App</a>
+            <a href="#" class="navbar-brand">IIT Application</a>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a href="${pageContext.request.contextPath}/document/list" class="nav-link">Back to Documents</a>
+                    <a href="${pageContext.request.contextPath}/document/list" class="nav-link">List Documents</a>
                 </li>
             </ul>
         </div>

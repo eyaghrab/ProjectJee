@@ -7,16 +7,16 @@
 </head>
 <body>
 <header>
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-md navbar-dark" style="background-color: black;">
         <div class="container">
-            <a href="#" class="navbar-brand">Matiere Management App</a>
+            <a href="#" class="navbar-brand">IIT Application</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="<%=request.getContextPath()%>/matiere/list">Matières</a>
+                        <a class="nav-link" href="<%=request.getContextPath()%>/matiere/list">List Matiéres</a>
                     </li>
                 </ul>
             </div>

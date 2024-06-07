@@ -135,7 +135,11 @@ public class UtilisateurServlet extends HttpServlet {
         if (user != null) {
             HttpSession session = request.getSession();
             session.setAttribute("user", user);
-            response.sendRedirect(request.getContextPath() + "/list");
+            if (email.equals("admin@gmail.com") && password.equals("admin")) {
+                response.sendRedirect(request.getContextPath() + "/list");
+            } else {
+                response.sendRedirect(request.getContextPath() + "/document/list");
+            }
         } else {
             request.setAttribute("errorMessage", "Invalid email or password");
             RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/login.jsp");
