@@ -7,37 +7,41 @@
 </head>
 <body>
 <header>
-    <nav class="navbar navbar-expand-md navbar-dark" style="background-color: tomato">
-        <div>
-            <a href="#" class="navbar-brand"> Matiere Management App </a>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container">
+            <a href="#" class="navbar-brand">Matiere Management App</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="<%=request.getContextPath()%>/matiere/list">Matières</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-
-        <ul class="navbar-nav">
-            <li><a href="<%=request.getContextPath()%>/matiere/list" class="nav-link">Matieres</a></li>
-        </ul>
     </nav>
 </header>
-<br>
-<div class="container col-md-5">
+<div class="container mt-4">
     <div class="card">
+        <div class="card-header">
+            <h2 class="text-center">Add New Matiere</h2>
+        </div>
         <div class="card-body">
             <form action="insert" method="post">
-                <caption>
-                    <h2>Add New Matiere</h2>
-                </caption>
-
-                <fieldset class="form-group">
-                    <label>Matiere Name</label> <input type="text" class="form-control" name="name" required="required">
-                </fieldset>
-
-                <fieldset class="form-group">
-                    <label>ID Enseignant</label> <input type="number" class="form-control" name="idEnseignant">
-                </fieldset>
-
-                <fieldset class="form-group">
-                    <label>Number of Max</label> <input type="number" class="form-control" name="nbMax">
-                </fieldset>
-
+                <div class="form-group">
+                    <label for="name">Matiere Name</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="idEnseignant">ID Enseignant</label>
+                    <input type="number" class="form-control" id="idEnseignant" name="idEnseignant">
+                </div>
+                <div class="form-group">
+                    <label for="nbMax">Number of Max</label>
+                    <input type="number" class="form-control" id="nbMax" name="nbMax">
+                </div>
                 <button type="submit" class="btn btn-success">Save</button>
             </form>
         </div>
